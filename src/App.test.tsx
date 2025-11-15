@@ -5,5 +5,5 @@ import App from './App';
 test('renders', () => {
   render(<App />);
 
-  expect(screen.getByText('My Vite Starter')).toBeInTheDocument();
+  expect(screen.getByText('My Bun Starter')).toBeInTheDocument();
 });

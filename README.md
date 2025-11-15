@@ -1,4 +1,4 @@
-# My Vite Starter
+# My Bun Starter
 
 Core components:
 
@@ -22,4 +22,4 @@ The Biome configuration was migrated from an earlier ESLint configuration that u
 
 # VS Code
 
-We recommend Biome and Prettier extensions for VS Code. Biome as it handles our formatting and linting tasks, and Prettier for formatting things Biome doesn't handle 
+We recommend Biome and Prettier extensions for VS Code. Biome as it handles our formatting and linting tasks, and Prettier for formatting things Biome doesn't handle.

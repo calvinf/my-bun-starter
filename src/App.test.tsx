@@ -1,9 +1,9 @@
-import { expect, test } from 'bun:test';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { expect, test } from "bun:test";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders', () => {
+test("renders", () => {
   render(<App />);
 
-  expect(screen.getByText('My Bun Starter')).toBeInTheDocument();
+  expect(screen.getByText("My Bun Starter")).toBeInTheDocument();
 });

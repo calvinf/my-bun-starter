@@ -1,17 +1,17 @@
-import starter from "../public/starter.html";
-import { serve } from "bun";
+import starter from '../public/starter.html';
+import { serve } from 'bun';
 
 serve({
   static: {
-    "/": starter,
+    '/': starter,
   },
 
   port: process.env.PORT ? parseInt(process.env.PORT) : 5173,
 
-  development: process.env.NODE_ENV === "development",
+  development: process.env.NODE_ENV === 'development',
 
   // API requests
   fetch() {
-    return new Response("hello starter");
+    return new Response('hello starter');
   },
 });

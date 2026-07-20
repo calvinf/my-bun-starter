@@ -4,17 +4,17 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc -b && vite build",
+    "dev": "vite",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "prepare": "husky",
     "preview": "vite preview",
     "t": "bun test --watch",
     "test": "bun test",
-    "test:coverage": "bun test --coverage",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "format": "oxfmt",
-    "format:check": "oxfmt --check",
-    "prepare": "husky"
+    "test:coverage": "bun test --coverage"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",

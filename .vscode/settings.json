@@ -1,9 +1,10 @@
 {
-  // Format with prettier
-  "[css][json][jsonc][javascript][javascriptreact][typescript][typescriptreact][html][markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Format with oxfmt (via the oxc extension)
+  "[json][jsonc][javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.formatOnSave": true
   },
+  "oxc.fmt.experimental": true,
 
   // CSS - Tailwind
   "css.validate": false,

@@ -1,17 +1,21 @@
 {
-  // Format with prettier
-  "[css][json][jsonc][javascript][javascriptreact][typescript][typescriptreact][html][markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Format with oxfmt (via the oxc extension)
+  "[json][jsonc][javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.formatOnSave": true
   },
+  "oxc.enable": true,
+  "oxc.fmt.experimental": true,
+
+  // Disable other linters/formatters in this repo
+  "biome.enabled": false,
+  "prettier.enable": false,
+  "eslint.enable": false,
 
   // CSS - Tailwind
   "css.validate": false,
   "tailwindCSS.validate": true,
 
   // TypeScript - use local version
-  "typescript.tsdk": "node_modules/typescript/lib",
-
-  // Biome - enable in this repo
-  "biome.enabled": false
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -21,5 +21,5 @@
     "noUncheckedSideEffectImports": true,
     "types": ["bun-types", "@testing-library/jest-dom"]
   },
-  "include": ["vite.config.ts", "build-app.ts", "happydom.ts", "testing-library.ts"]
+  "include": ["happydom.ts", "testing-library.ts"]
 }

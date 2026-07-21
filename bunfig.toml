@@ -1,2 +1,8 @@
+[serve.static]
+plugins = ["bun-plugin-tailwind"]
+
+[install]
+linker = "isolated"
+
 [test]
 preload = ["./happydom.ts", "./testing-library.ts"]

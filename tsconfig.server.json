@@ -19,5 +19,5 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["bun-types"]
   },
-  "include": ["src/backend.ts"]
+  "include": ["src/backend.ts", "src/html.d.ts"]
 }

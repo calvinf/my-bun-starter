@@ -1,0 +1,33 @@
+amends "package://github.com/jdx/hk/releases/download/v1.56.0/hk@1.56.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.56.0/hk@1.56.0#/Builtins.pkl"
+
+local linters = new Mapping<String, Step> {
+  ["oxlint"] = (Builtins.ox_lint) {
+    // Match `bun run lint` / `bun run lint:fix` rather than failing the hook on warnings.
+    check = "oxlint {{files}}"
+    fix = "oxlint --fix {{files}}"
+  }
+  ["oxfmt"] = Builtins.oxfmt
+}
+
+hooks {
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps = linters
+  }
+  ["pre-push"] {
+    steps {
+      ["test"] {
+        check = "bun test"
+      }
+    }
+  }
+  ["check"] {
+    steps = linters
+  }
+  ["fix"] {
+    fix = true
+    steps = linters
+  }
+}
